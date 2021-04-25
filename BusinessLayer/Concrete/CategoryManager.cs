@@ -18,11 +18,12 @@ namespace BusinessLayer.Concrete
         }
         public void CategoryAddBl(Category p)
         {
-            if(p.CategoryName=="" || p.CategoryName.Length<=3 || p.CategoryDescription=="" || p.CategoryName.Length=>51)
+            if(p.CategoryName=="" || p.CategoryName.Length<=3 || p.CategoryDescription=="" || p.CategoryName.Length>=51)
             {
                 //hata mesajı
             }
-            else{
+            else
+            {
                 repo.insert(p);
             }
         }
